@@ -1,0 +1,5 @@
+best.pt
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
