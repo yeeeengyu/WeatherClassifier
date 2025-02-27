@@ -1,4 +1,4 @@
-best.pt
+models/best.pt
 __pycache__/
 *.pyc
 *.pyo

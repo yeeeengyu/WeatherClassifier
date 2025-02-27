@@ -3,4 +3,3 @@ uvicorn
 pillow
 ultralytics
 jinja2
-python-multipart
