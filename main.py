@@ -13,7 +13,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # 모델 로딩
-model = YOLO("models/best.pt")
+model = YOLO("best.pt")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
@@ -35,7 +35,6 @@ async def predict(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
-if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run(app, host="0.0.0.0", port=port) 
+import os
+port = int(os.environ.get("PORT", 000))
+uvicorn.run(app, host="0.0.0.0", port=port) 
