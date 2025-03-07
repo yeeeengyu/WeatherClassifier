@@ -13,8 +13,8 @@ fileInput.addEventListener("change", (event) => {
     const img = document.createElement("img");
     img.src = URL.createObjectURL(file);
     img.alt = "업로드된 이미지";
-    img.style.maxWidth = "300px";
-    img.style.marginTop = "10px";
+    img.style.maxWidth = "620px";
+    img.style.marginTop = "40px";
 
     // 기존 이미지 삭제 후 새로운 이미지 추가
     imageContainer.innerHTML = "";
@@ -49,8 +49,15 @@ classifyBtn.addEventListener("click", async () => {
     }
 
     const data = await response.json();
-    if (data.weather) {
-      resultDiv.innerHTML = `<p>예측된 날씨: <strong>${data.weather}</strong></p>`;
+    function sleep(sec) {
+      return new Promise((resolve) => setTimeout(resolve, sec * 1000));
+    }
+    resultDiv.innerHTML = `<p>제가 보기에 이 날씨는...</p>`;
+    await sleep(2);
+    if (data.weather == "rainy") {
+      resultDiv.innerHTML = `<p>이 사진의 날씨는 <strong>${data.weather}</strong>네요!! 우산챙기세요 지금 당장 !!!!!!!!!!!!!!!!! ☔</p>`;
+    } else if (data.weather) {
+      resultDiv.innerHTML = `<p>이 사진의 날씨는 <strong>${data.weather}</strong>이네요!! 맞나요???????</p>`;
     } else if (data.error) {
       resultDiv.innerHTML = `<p>에러 발생: ${data.error}</p>`;
     }

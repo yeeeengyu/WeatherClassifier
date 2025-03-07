@@ -19,7 +19,7 @@ model = YOLO("best.pt")
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-#이미지 가져오고 예측 라우팅
+#이미지 가져오고 분류 라우팅
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
     try:
@@ -36,5 +36,5 @@ async def predict(file: UploadFile = File(...)):
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
 import os
-port = int(os.environ.get("PORT", 000))
-uvicorn.run(app, host="0.0.0.0", port=port) 
+port = int(os.environ.get("PORT", 8000))
+uvicorn.run(app, host="127.0.0.1", port=port) 
