@@ -8,13 +8,13 @@
 }
 
 h1 {
-  margin: 50px;
+  margin: 30px;
 }
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  padding-bottom: 20px;
 }
 
 .image-container img {
@@ -30,11 +30,6 @@ main {
 }
 
 .image.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.button.container {
   display: flex;
   flex-direction: column;
 }
