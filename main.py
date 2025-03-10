@@ -11,8 +11,6 @@ app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
-
-# 모델 로딩
 model = YOLO("best.pt")
 
 @app.get("/", response_class=HTMLResponse)

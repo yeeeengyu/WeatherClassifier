@@ -19,7 +19,7 @@ fileInput.addEventListener("change", (event) => {
 
     imageContainer.innerHTML = "";
     imageContainer.appendChild(img);
-
+ 
     uploadBtn.textContent = `선택된 파일: ${file.name}`;
     if (Jansori) Jansori.style.display = "none";
 
@@ -63,6 +63,6 @@ classifyBtn.addEventListener("click", async () => {
       resultDiv.innerHTML = `<p>에러 발생: ${data.error}</p>`;
     }
   } catch (error) {
-    resultDiv.innerHTML = `<p>에러 발생: ${error.message}</p>`; 
+    resultDiv.innerHTML = `<p>에러 ${error.message}</p>`; 
   }
 });
