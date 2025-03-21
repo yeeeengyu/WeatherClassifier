@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/style/style.css" />
     <script src="/static/script.js" defer></script>
-    <link rel="icon" href="/static/favicon.ico"/>
+    <link rel="icon" href="/static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
     <title>날씨 분류기</title>
   </head>
   <body>
     <h1>날씨 분류기</h1>
-    <main style="margin: 20px;">
+    <main style="margin: 20px">
       <div class="image-container"></div>
     </main>
     <div class="button-container">
-      <input type="file" id="in" accept="image/*" style="display: none; margin: 20px;"  />
+      <input
+        type="file"
+        id="in"
+        accept="image/*"
+        style="display: none; margin: 20px"
+      />
       <label for="in" id="uploadBtn">사진 선택</label>
       <button id="Classify"><p>분류 시작하기</p></button>
       <div id="resultFUCK"><p>여기에 결과가 출력됩니다</p></div>

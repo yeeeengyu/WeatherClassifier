@@ -19,8 +19,8 @@ fileInput.addEventListener("change", (event) => {
 
     imageContainer.innerHTML = "";
     imageContainer.appendChild(img);
- 
-    uploadBtn.textContent = `선택된 파일: ${file.name}`;
+
+    uploadBtn.textContent = `선택파일: ${file.name}`;
     if (Jansori) Jansori.style.display = "none";
 
     selectedFile = file;
@@ -33,7 +33,7 @@ fileInput.addEventListener("change", (event) => {
 
 classifyBtn.addEventListener("click", async () => {
   if (!selectedFile) {
-    alert("먼저 이미지를 업로드하세요!");
+    alert("먼저 이미지를 업로드해주세요!");
     return;
   }
 
@@ -47,7 +47,7 @@ classifyBtn.addEventListener("click", async () => {
     });
 
     if (!response.ok) {
-      throw new Error("서버 응답에 실패했습니다.");
+      throw new Error("서버 응답 실패");
     }
 
     const data = await response.json();
@@ -63,6 +63,6 @@ classifyBtn.addEventListener("click", async () => {
       resultDiv.innerHTML = `<p>에러 발생: ${data.error}</p>`;
     }
   } catch (error) {
-    resultDiv.innerHTML = `<p>에러 ${error.message}</p>`; 
+    resultDiv.innerHTML = `<p>에러 ${error.message}</p>`;
   }
 });
