@@ -5,3 +5,5 @@ Frontend : HTML, JS
 Backend : FastAPI
 
 Model : YOLO Classification
+
+Deploy : CBAL
