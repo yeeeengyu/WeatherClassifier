@@ -6,4 +6,4 @@ Backend : FastAPI
 
 Model : YOLO Classification
 
-Deploy : CBAL
+Deploy : AWS EC2
