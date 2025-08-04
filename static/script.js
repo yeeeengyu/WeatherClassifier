@@ -4,6 +4,7 @@ const Jansori = document.getElementById("jansori");
 const uploadBtn = document.getElementById("uploadBtn");
 const classifyBtn = document.getElementById("Classify");
 const resultDiv = document.getElementById("resultFUCK");
+const detailResult = document.querySelector(".result");
 
 let selectedFile = null;
 
@@ -59,10 +60,14 @@ classifyBtn.addEventListener("click", async () => {
     await sleep(2);
     if (data.weather) {
       resultDiv.innerHTML = `<p>이 사진의 날씨는 <strong>${data.weather}</strong>이네요!! 맞나요???????</p>`;
+
+      detailResult.innerHTML = `<p style="font-size: 10px;">${JSON.stringify(data.log)}</p>`;
+      console.log(data);
     } else if (data.error) {
       resultDiv.innerHTML = `<p>에러 발생: ${data.error}</p>`;
     }
   } catch (error) {
     resultDiv.innerHTML = `<p>에러 ${error.message}</p>`;
   }
+  
 });

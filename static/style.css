@@ -4,7 +4,6 @@
   font-style: normal;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -14,11 +13,11 @@
   align-items: center;
   font-family: "Do Hyeon", sans-serif;
   letter-spacing: 0.05em;
-
+  font-size: 25px;
 }
 
 h1 {
-  margin: 30px;
+  margin: 20px;
 }
 main {
   display: flex;
@@ -79,21 +78,24 @@ main {
   border: 1px dashed #fcba03;
 }
 
-#result {
-  margin-top: 20px;
+#res {
+  font-size: 20px;
 }
 
-#result img {
-  width: 100%;
-  max-width: 300px;
-  margin: 20px auto;
-  border-radius: 5px;
+footer {
+  bottom: 0px;
+  position: absolute;
+  color: #c8c8c8;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
-#result h3 {
-  margin: 20px 0;
-}
-
-#result p {
-  margin: 10px 0;
+footer a {
+  text-decoration: none;
+  text-decoration-color: none;
+  text-decoration-line: none;
+  color: #c8c8c8;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
