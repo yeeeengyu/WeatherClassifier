@@ -5,6 +5,7 @@ from fastapi.templating import Jinja2Templates
 from ultralytics import YOLO
 from PIL import Image
 import io
+# 배포성공
 
 app = FastAPI()
 
