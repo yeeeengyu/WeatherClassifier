@@ -4,6 +4,6 @@ Frontend : HTML, JS
 
 Backend : FastAPI
 
-Model : YOLO Classification
+Model : YOLOv8
 
-Deploy : AWS EC2
+Deploy : AWS EC2, Docker
